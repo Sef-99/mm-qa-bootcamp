@@ -20,14 +20,14 @@ public class FirstTask {
             System.out.println("Do you want to continue? Yes/No");
         } while (doesUserContinue(scanner));
         System.out.println();
-        printEmployeeEmails(employeeList);
+        printEmployeeData(employeeList);
     }
 
-    private static void printEmployeeEmails(LinkedList<Employee> employeeList) {
-        System.out.println("Printing all employees' emails: ");
+    private static void printEmployeeData(LinkedList<Employee> employeeList) {
+        System.out.println("Printing all employees' information: ");
         for (Employee employee : employeeList) {
-            String employeeEmail = employee.getEmail();
-            System.out.println(employeeEmail);
+            System.out.println(employee);
+            System.out.println();
         }
     }
 

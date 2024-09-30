@@ -32,14 +32,22 @@ public class Employee {
         return !REGISTERED_EMPLOYEE_NUMBERS.contains(employeeNumber);
     }
 
-    public String getEmail() {
-        return email;
-    }
-
     @Override
     public String toString() {
-        return String.format("Employee{firstName='%s', lastName='%s', age=%d, employeeNumber=%d}",
-                this.firstName, this.lastName, this.age, this.employeeNumber);
+        return String.format(
+                """
+                        Employee #%d:
+                        Employee Name: '%s %s'
+                        Employee Age: %d
+                        Employee Email: '%s'""",
+                this.employeeNumber,
+                this.firstName,
+                this.lastName,
+                this.age,
+                this.email
+        );
     }
+
+
 
 }
