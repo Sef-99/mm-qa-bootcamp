@@ -17,20 +17,32 @@ public class SecondTask {
     }
 
     private static LeaseCalculator gatherLeaseInputs(Scanner scanner) {
-        System.out.println("Please enter the Total Leased Money: ");
-        totalLeasedMoney = getUserIntInput(scanner, "money");
+        LeaseCalculator leaseCalculator = null;
 
-        System.out.println("Please enter the Down Payment: ");
-        int downPayment = getUserIntInput(scanner, "downPayment");
+        while (leaseCalculator == null) {
+            try {
+                System.out.println("Please enter the Total Leased Money: ");
+                totalLeasedMoney = getUserIntInput(scanner, "money");
 
-        System.out.println("Please enter the Lease Term (in months): ");
-        int leaseTerm = getUserIntInput(scanner, "leaseTerm");
+                System.out.println("Please enter the Down Payment: ");
+                int downPayment = getUserIntInput(scanner, "downPayment");
 
-        System.out.println("Please enter the Interest Rate (in percentage): ");
-        double interestRate = getUserDoubleInput(scanner);
+                System.out.println("Please enter the Lease Term (in months): ");
+                int leaseTerm = getUserIntInput(scanner, "leaseTerm");
 
-        return new LeaseCalculator(totalLeasedMoney, downPayment, leaseTerm, interestRate);
+                System.out.println("Please enter the Interest Rate (in percentage): ");
+                double interestRate = getUserDoubleInput(scanner);
+
+                leaseCalculator = new LeaseCalculator(totalLeasedMoney, downPayment, leaseTerm, interestRate);
+            } catch (IllegalArgumentException argumentException) {
+                System.out.println("Invalid input: " + argumentException.getMessage());
+                System.out.println("Please try again.");
+            }
+        }
+
+        return leaseCalculator;
     }
+
 
     private static boolean doesUserContinue(Scanner scanner) {
         while (true) {

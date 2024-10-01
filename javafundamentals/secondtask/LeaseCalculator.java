@@ -8,6 +8,19 @@ public class LeaseCalculator {
     private final double monthlyPayment;
 
     public LeaseCalculator(int totalLeasedMoney, int downPayment, int leaseTerm, double interestRate) {
+        if (totalLeasedMoney <= 0) {
+            throw new IllegalArgumentException("Total leased money must be greater than 0.");
+        }
+        if (downPayment < 0 || downPayment > totalLeasedMoney) {
+            throw new IllegalArgumentException("Down payment must be between 0 and total leased money.");
+        }
+        if (leaseTerm <= 0) {
+            throw new IllegalArgumentException("Lease term must be greater than 0.");
+        }
+        if (interestRate < 0) {
+            throw new IllegalArgumentException("Interest rate cannot be negative.");
+        }
+
         this.totalLeasedMoney = totalLeasedMoney;
         this.downPayment = downPayment;
         this.leaseTerm = leaseTerm;

@@ -17,7 +17,11 @@ public class Employee {
     Employee(String firstName, String lastName, int age, int employeeNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        if (age >= 0 && age <= 100) {
+            this.age = age;
+        } else {
+            throw new RuntimeException("Invalid Employee Age. Should be between 0 and 100.");
+        }
         if(isEmployeeNumberFree(employeeNumber)){
             this.employeeNumber = employeeNumber;
             REGISTERED_EMPLOYEE_NUMBERS.add(employeeNumber);
