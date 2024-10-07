@@ -2,9 +2,14 @@
 
 Repository for MM's QA Bootcamp for Git Basics
 
+## Current contents:
+
+- First java homework in java fundamentals
+- Pair Programming homework done with Chiara Aguiar
+
 ## Features
 
-The project's features are:
+(Example) The project's features are:
 
 - Test Planning and Documentation
 - Manual Testing
