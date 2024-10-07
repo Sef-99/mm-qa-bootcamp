@@ -1,4 +1,4 @@
-package javafundamentals.secondtask;
+package secondtask;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package javafundamentals.firsttask;
+package firsttask;
 
 import java.util.InputMismatchException;
 import java.util.LinkedList;

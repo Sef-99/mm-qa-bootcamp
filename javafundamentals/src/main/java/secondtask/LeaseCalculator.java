@@ -1,4 +1,4 @@
-package javafundamentals.secondtask;
+package secondtask;
 
 public class LeaseCalculator {
     private final int totalLeasedMoney;

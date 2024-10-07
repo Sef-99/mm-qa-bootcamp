@@ -1,4 +1,4 @@
-package javafundamentals.firsttask;
+package firsttask;
 
 import java.util.ArrayList;
 
