@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="javafundamentals" />
         <module name="pairprogramming" />
+        <module name="pairprogrammingtwo" />
       </profile>
     </annotationProcessing>
   </component>
