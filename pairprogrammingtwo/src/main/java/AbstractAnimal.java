@@ -1,4 +1,4 @@
-
+import java.time.Year;
 
 public abstract class AbstractAnimal implements Animal {
     private final String species;
@@ -29,9 +29,11 @@ public abstract class AbstractAnimal implements Animal {
     }
 
     @Override
-    public int getBirthYear() {
-        return this.birthYear;
+    public int getAge() {
+        int currentYear = Year.now().getValue();
+        return currentYear - this.birthYear;
     }
+
 
     @Override
     public String toString() {
@@ -39,7 +41,7 @@ public abstract class AbstractAnimal implements Animal {
                 "  Species    : " + getSpecies() + "\n" +
                 "  Breed      : " + getBreed() + "\n" +
                 "  Name       : " + getName() + "\n" +
-                "  Birth Year : " + getBirthYear();
+                "  Age        : " + getAge() + " years old";
     }
 
 

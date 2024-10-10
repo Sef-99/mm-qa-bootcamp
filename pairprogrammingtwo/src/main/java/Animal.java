@@ -6,7 +6,7 @@ public interface Animal {
 
     String getName();
 
-    int getBirthYear();
+    int getAge();
 
     void eat();
 
