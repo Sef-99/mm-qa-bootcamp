@@ -9,7 +9,24 @@ public abstract class AbstractAnimal implements Animal {
         this.species = species;
         this.breed = breed;
         this.birthYear = birthYear;
+
+        Zoo zoo = new Zoo("Madagascar Zoo");
+
+        // Crear las áreas
+        ZooArea area1 = new ZooArea(7);
+        ZooArea area2 = new ZooArea(5);
+
+
+
+        // Agregar las áreas al zoo
+        zoo.addArea(area1);
+        zoo.addArea(area2);
+
+        // Filtrar áreas con más de 1 animal
+        zoo.filterAreasWithMoreThanXAnimals(1);
     }
+
+
 
     @Override
     public String getSpecies() {
