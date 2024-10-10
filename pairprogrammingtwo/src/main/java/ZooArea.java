@@ -1,26 +1,39 @@
-import java.util.ArrayList;
+
+import java.util.LinkedList;
 import java.util.List;
 
 public class ZooArea {
-    private int maxCapacity;
-    private List<Animal> animals;
+    private final int maxCapacity;
+    private final List<AbstractAnimal> animals;
+    private final String name;
 
-    public ZooArea(int capacidadMaxima) {
+    public ZooArea(int maxCapacity, String name) {
         this.maxCapacity = maxCapacity;
-        this.animals = new ArrayList<>();
+        this.name = name;
+        this.animals = new LinkedList<>();
     }
 
-    public boolean addAnimal(Animal animal) {
+    public void addAnimal(AbstractAnimal animal) {
+        if(animals.contains(animal)) {
+            System.out.printf("The animal %s is already in the list!", animal.getName());
+            System.out.println();
+            return;
+        }
+
         if (animals.size() < maxCapacity) {
             animals.add(animal);
-            return true;
+            System.out.printf("Animal %s added!", animal.getName());
+            System.out.println();
         } else {
-            System.out.println("No se puede agregar más animales , Capacidad máxima de la area alcanzada.");
-            return false;
+            System.out.println("Cannot add more animals to the ZooArea.");
         }
     }
 
-    public List<Animal> getAnimals() {
+    public List<AbstractAnimal> getAnimals() {
         return animals;
+    }
+
+    public String getName() {
+        return name;
     }
 }
