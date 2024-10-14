@@ -36,4 +36,14 @@ public class ZooArea {
     public String getName() {
         return name;
     }
+
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
+    @Override
+    public String toString() {
+        return "ZooArea{name='" + name + "', maxCapacity=" + maxCapacity + "}";
+    }
+
 }

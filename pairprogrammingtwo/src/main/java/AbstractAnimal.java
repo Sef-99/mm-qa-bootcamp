@@ -28,6 +28,10 @@ public abstract class AbstractAnimal implements Animal {
         return this.name;
     }
 
+    public int getBirthYear() {
+        return birthYear;
+    }
+
     @Override
     public int getAge() {
         int currentYear = Year.now().getValue();

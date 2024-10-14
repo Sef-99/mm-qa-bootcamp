@@ -8,6 +8,8 @@ public interface Animal {
 
     int getAge();
 
+    int getBirthYear();
+
     void eat();
 
 }
