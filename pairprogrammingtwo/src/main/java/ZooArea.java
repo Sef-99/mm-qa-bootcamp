@@ -23,7 +23,7 @@ public class ZooArea {
             System.out.printf("Animal %s added!", animal.getName());
             System.out.println();
         } else {
-            System.out.println("Cannot add more animals to the ZooArea.");
+            throw new IllegalStateException("Cannot add more animals to the ZooArea.");
         }
     }
 
