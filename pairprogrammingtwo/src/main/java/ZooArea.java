@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ZooArea {
     private final int maxCapacity;
-    private final List<AbstractAnimal> animals;
+    private final List<Animal> animals;
     private final String name;
 
     public ZooArea(int maxCapacity, String name) {
@@ -13,7 +13,7 @@ public class ZooArea {
         this.animals = new LinkedList<>();
     }
 
-    public void addAnimal(AbstractAnimal animal) throws IllegalArgumentException, IllegalStateException {
+    public void addAnimal(Animal animal) throws IllegalArgumentException, IllegalStateException {
         if(animals.contains(animal)) {
             throw new IllegalArgumentException("The animal " + animal.getName() + " is already in the list!");
         }
@@ -27,7 +27,7 @@ public class ZooArea {
         }
     }
 
-    public List<AbstractAnimal> getAnimals() {
+    public List<Animal> getAnimals() {
         return animals;
     }
 

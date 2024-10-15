@@ -100,8 +100,8 @@ public class ZooReader {
         }
 
         return switch (species) {
-            case "Mykure" -> new Mykure(species, breed, name, birthYear);
-            case "Sloth" -> new Sloth(species, breed, name, birthYear);
+            case "Mykure" -> new Mykure(name, species, breed, birthYear);
+            case "Sloth" -> new Sloth(name, species, breed, birthYear);
             default -> null;
         };
     }
