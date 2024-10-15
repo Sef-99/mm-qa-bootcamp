@@ -1,3 +1,5 @@
+package Animal;
+
 import java.time.Year;
 
 public abstract class AbstractAnimal implements Animal {
@@ -41,7 +43,7 @@ public abstract class AbstractAnimal implements Animal {
 
     @Override
     public String toString() {
-        return "Animal Details:\n" +
+        return "Animal.Animal Details:\n" +
                 "  Species    : " + getSpecies() + "\n" +
                 "  Breed      : " + getBreed() + "\n" +
                 "  Name       : " + getName() + "\n" +

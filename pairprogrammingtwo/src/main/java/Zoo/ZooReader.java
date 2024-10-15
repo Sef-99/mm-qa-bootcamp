@@ -1,3 +1,9 @@
+package Zoo;
+
+import Animal.Animal;
+import Animal.Mykure;
+import Animal.Sloth;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -19,7 +25,7 @@ public class ZooReader {
                 zooAreas.add(zooArea);
             }
         }
-        System.out.println("Zoo areas parsed successfully.");
+        System.out.println("Zoo.Zoo areas parsed successfully.");
         return zooAreas;
     }
 
@@ -100,8 +106,8 @@ public class ZooReader {
         }
 
         return switch (species) {
-            case "Mykure" -> new Mykure(name, species, breed, birthYear);
-            case "Sloth" -> new Sloth(name, species, breed, birthYear);
+            case "Animal.Mykure" -> new Mykure(name, species, breed, birthYear);
+            case "Animal.Sloth" -> new Sloth(name, species, breed, birthYear);
             default -> null;
         };
     }

@@ -1,3 +1,9 @@
+import Animal.Animal;
+import Zoo.Zoo;
+import Zoo.ZooArea;
+import Zoo.ZooReader;
+import Zoo.ZooWriter;
+
 import java.io.*;
 import java.util.List;
 

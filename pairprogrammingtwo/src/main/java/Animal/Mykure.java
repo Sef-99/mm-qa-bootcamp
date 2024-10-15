@@ -1,4 +1,4 @@
-
+package Animal;
 
 public class Mykure extends AbstractAnimal {
 

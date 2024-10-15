@@ -1,3 +1,6 @@
+package Zoo;
+
+import Animal.Animal;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -20,10 +23,10 @@ public class ZooArea {
 
         if (animals.size() < maxCapacity) {
             animals.add(animal);
-            System.out.printf("Animal %s added!", animal.getName());
+            System.out.printf("Animal.Animal %s added!", animal.getName());
             System.out.println();
         } else {
-            throw new IllegalStateException("Cannot add more animals to the ZooArea.");
+            throw new IllegalStateException("Cannot add more animals to the Zoo.ZooArea.");
         }
     }
 
@@ -41,7 +44,7 @@ public class ZooArea {
 
     @Override
     public String toString() {
-        return "ZooArea{name='" + name + "', maxCapacity=" + maxCapacity + "}";
+        return "Zoo.ZooArea{name='" + name + "', maxCapacity=" + maxCapacity + "}";
     }
 
 }

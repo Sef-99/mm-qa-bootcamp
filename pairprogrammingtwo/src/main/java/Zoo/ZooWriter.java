@@ -1,3 +1,9 @@
+package Zoo;
+
+import Animal.Animal;
+import Animal.Sloth;
+import Animal.Mykure;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -18,7 +24,7 @@ public class ZooWriter {
             writer.write("maxCapacity: " + zooArea.getMaxCapacity());
             writer.newLine();
         }
-        System.out.println("Zoo areas created!");
+        System.out.println("Zoo.Zoo areas created!");
     }
 
 
@@ -46,14 +52,14 @@ public class ZooWriter {
     }
 
     private List<Animal> createAnimals() {
-        Animal mykure1 = new Mykure("Spike", "Mykure", "Spotted Mykure", 2018);
-        Animal mykure2 = new Mykure("Venom", "Mykure", "Striped Mykure", 2016);
-        Animal mykure3 = new Mykure("Flash", "Mykure", "Golden Mykure", 2019);
+        Animal mykure1 = new Mykure("Spike", "Animal.Mykure", "Spotted Animal.Mykure", 2018);
+        Animal mykure2 = new Mykure("Venom", "Animal.Mykure", "Striped Animal.Mykure", 2016);
+        Animal mykure3 = new Mykure("Flash", "Animal.Mykure", "Golden Animal.Mykure", 2019);
 
 
-        Animal sloth1 = new Sloth("Lazy", "Sloth", "Brown-throated Sloth", 2015);
-        Animal sloth2 = new Sloth("Sleepy", "Sloth", "Pygmy Three-Toed Sloth", 2013);
-        Animal sloth3 = new Sloth("Chill", "Sloth", "Hoffmann's Two-Toed Sloth", 2016);
+        Animal sloth1 = new Sloth("Lazy", "Animal.Sloth", "Brown-throated Animal.Sloth", 2015);
+        Animal sloth2 = new Sloth("Sleepy", "Animal.Sloth", "Pygmy Three-Toed Animal.Sloth", 2013);
+        Animal sloth3 = new Sloth("Chill", "Animal.Sloth", "Hoffmann's Two-Toed Animal.Sloth", 2016);
 
         List<Animal> animals = new LinkedList<>();
         animals.add(mykure1);

@@ -1,3 +1,5 @@
+package Animal;
+
 public interface Animal {
 
     String getSpecies();
