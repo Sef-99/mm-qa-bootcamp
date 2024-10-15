@@ -6,6 +6,7 @@ import java.util.List;
 public class ZooWriter {
     private final BufferedWriter writer;
 
+    // Dependency Injection Principle (SOLID)
     public ZooWriter(BufferedWriter writer){
         this.writer = writer;
     }

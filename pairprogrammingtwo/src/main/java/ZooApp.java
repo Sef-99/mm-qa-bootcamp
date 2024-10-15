@@ -10,34 +10,34 @@ public class ZooApp {
             ZooWriter zooWriter = new ZooWriter(writer);
             zooWriter.writeAnimals();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("ZooAreas.txt"))) {
             ZooWriter zooWriter = new ZooWriter(writer);
             zooWriter.writeZooAreas();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
 
         try(BufferedReader reader = new BufferedReader(new FileReader("Animals.txt"))) {
-            ZooReader animalReader = new ZooReader(reader);
-            List<Animal> animals = animalReader.readAnimals();
+            ZooReader zooReader = new ZooReader(reader);
+            List<Animal> animals = zooReader.readAnimals();
             for (Animal animal : animals) {
                 System.out.println(animal);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
 
         try(BufferedReader reader = new BufferedReader(new FileReader("ZooAreas.txt"))) {
-            ZooReader animalReader = new ZooReader(reader);
-            List<ZooArea> zooAreas = animalReader.readZooArea();
+            ZooReader zooReader = new ZooReader(reader);
+            List<ZooArea> zooAreas = zooReader.readZooArea();
             for (ZooArea zooArea : zooAreas) {
                 System.out.println(zooArea);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException | NumberFormatException e ) {
+            System.out.println("Error: " + e.getMessage());
         }
 
 

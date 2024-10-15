@@ -13,11 +13,9 @@ public class ZooArea {
         this.animals = new LinkedList<>();
     }
 
-    public void addAnimal(AbstractAnimal animal) {
+    public void addAnimal(AbstractAnimal animal) throws IllegalArgumentException, IllegalStateException {
         if(animals.contains(animal)) {
-            System.out.printf("The animal %s is already in the list!", animal.getName());
-            System.out.println();
-            return;
+            throw new IllegalArgumentException("The animal " + animal.getName() + " is already in the list!");
         }
 
         if (animals.size() < maxCapacity) {
