@@ -110,7 +110,7 @@ class DiscountCalculatorTest {
 
     // R10
     @Test
-    void givenGoldMembershipAndPrice51Point01_whenCalculateDiscount_thenZeroPercentDiscount() {
+    void givenGoldMembershipAndPrice50Point01_whenCalculateDiscount_thenZeroPercentDiscount() {
         MembershipLevel membershipLevel = MembershipLevel.GOLD;
         double originalPrice = 50.01;
 
