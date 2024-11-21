@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="javafundamentals" />
+        <module name="seleniumhomeworktwo" />
         <module name="seleniumhomework" />
         <module name="pairprogramming" />
         <module name="pairprogrammingtwo" />
