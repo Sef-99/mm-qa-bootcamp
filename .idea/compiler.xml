@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="javafundamentals" />
         <module name="seleniumhomeworktwo" />
+        <module name="finalproject" />
         <module name="seleniumhomework" />
         <module name="pairprogramming" />
         <module name="pairprogrammingtwo" />
