@@ -27,6 +27,7 @@ public class FindTransactionsTest extends BaseTest {
         CustomerCreatedPage customerCreatedPage = registerPage.createNewUserAndLogIn();
         TransferFundsPage transferFundsPage = customerCreatedPage.navigateToTransferFundsPage();
         transferFundsPage.transferFunds("100");
+        transferFundsPage.transferFunds("150");
         findTransactionsPage = customerCreatedPage.navigateToFindTransactionsPage();
     }
 
